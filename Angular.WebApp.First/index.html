@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html ng-app="app1">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+</head>
+<body ng-controller="appcontroller as vm">
+    <div class="container">
+        <div class="container">
+            <header class="page-header">
+                <h1>SSO angular app 1 - Implicit Client</h1>
+            </header>
+            <div class="row">
+                <ul class="list-unstyled list-inline pull-right">
+                    <li><button class="btn btn-primary call" ng-click="vm.callapi()">Call Service</button></li>
+                    <li><button class="btn btn-info logout" ng-click="vm.signout()">Logout</button></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Profile</div>
+                        <div class="panel-body">
+                            <pre id="profile">{{vm.profile}}</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Access Token</div>
+                        <div class="panel-body">
+                            <pre id="access-token">{{vm.access_token}}</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Ajax Result - Protected Api</div>
+                        <div class="panel-body">
+                            <pre id="ajax-result">{{vm.result}}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+
+    <!-- specific scripts -->
+    <script src="oidc.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/appcontroller.js"></script>
+</body>
+</html>
